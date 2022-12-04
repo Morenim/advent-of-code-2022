@@ -1,7 +1,5 @@
 package com.advent.day2
 
-import kotlin.math.round
-
 fun day2part1(lines: List<String>): Int {
     return lines.sumOf {
         val (opponentHand, playerHand) = it.split(" ")
