@@ -1,17 +1,13 @@
 package com.advent.day2
 
-fun day2part1(lines: List<String>): Int {
-    return lines.sumOf {
-        val (opponentHand, playerHand) = it.split(" ")
-        scorePlayerHand(playerHand) + scoreRound(opponentHand, playerHand)
-    }
+fun day2part1(lines: List<String>): Int = lines.sumOf {
+    val (opponentHand, playerHand) = it.split(" ")
+    scorePlayerHand(playerHand) + scoreRound(opponentHand, playerHand)
 }
 
-fun day2part2(lines: List<String>): Int {
-    return lines.sumOf {
-        val (opponentHand, roundResult) = it.split(" ")
-        scorePlayerHand(matchResult(opponentHand, roundResult)) + scoreResult(roundResult)
-    }
+fun day2part2(lines: List<String>): Int = lines.sumOf {
+    val (opponentHand, roundResult) = it.split(" ")
+    scorePlayerHand(matchResult(opponentHand, roundResult)) + scoreResult(roundResult)
 }
 
 fun scorePlayerHand(hand: String) = when (hand) {
